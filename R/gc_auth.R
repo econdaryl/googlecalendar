@@ -76,9 +76,10 @@ gc_auth <- function(new_user = FALSE,
     scope <- "https://www.googleapis.com/auth/calendar"
     gc_app <- httr::oauth_app("google", key = key, secret = secret)
 
-    gc_token <-
+    gc_token <- function(){
       httr::oauth_endpoints("google") %>%
       httr::oauth2.0_token(gc_app, scope, cache = cache)
+    }
 
     .cred$token <- gc_token
 
