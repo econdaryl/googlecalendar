@@ -54,7 +54,7 @@
 #' }
 gc_auth <- function(new_user = FALSE,
                     key = getOption("googlecalendar.client_key"),
-                    secret = getOption("googlecalendar.client_secret")
+                    secret = getOption("googlecalendar.client_secret"),
                     cache = TRUE,
                     token = NULL,
                     verbose = FALSE) {
