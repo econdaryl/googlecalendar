@@ -30,6 +30,7 @@ DELETE_resource <- function(path, ...) {
 GET_resource <- function(path, fields = NULL) {
 
   url <- build_url(path, fields = fields)
+  print(url)
 
   httr::GET(url, gc_token()) %>%
     httr::stop_for_status()
